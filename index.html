@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- what came with the template -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+ <!-- Our code is here --> 
+  <script src="script.js" defer></script>
+ <link type="text/css" rel="stylesheet" href="main.css"/>
+<!-- Comment out for his code from the PPT
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="index.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css">
+-->
+
+  <title>Tracking page</title>
+</head>
+
+<body> 
+<!--PAGE 1-->
+  <div data-role="page" id="home">
+
+    <!-- header -->
+    <div data-role="header" data-theme='e'>
+
+      <div data-role="navbar" data-theme='e'>
+        <ul>
+          <li><a href="#show" data-transition="slideup">Your Saved Restaurant</a></li>
+          <li><a href="#add" data-transition="slideup">Add a favorite Restaurant</a></li>
+          <li><a href="#menu" data-transition="slideup">View a Menu</a></li>
+        </ul>
+      </div>
+      <h2>Welcome to your Late Night @ BC</h2>
+      <h2>We list all the place that are open </h2>
+    </div>
+
+    <!-- content -->
+    <div data-role="content" data-theme='a'>
+      Restaurant Near by <br><br>
+      <div class="restaurant">
+      <div class="restaurant-info">
+        <div class="restaurant-name">Crunchy Coop</div>
+        <div class="restaurant-hours">Open Today: 9am - 10pm</div>
+      </div>
+      <div class="restaurant-countdown" data-time="22:00:00"></div>
+    </div>
+    
+    <div class="restaurant">
+      <div class="restaurant-info">
+        <div class="restaurant-name">Slammin' Salmon</div>
+        <div class="restaurant-hours">Open Today: 8am - 11pm</div>
+      </div>
+      <div class="restaurant-countdown" data-time="23:00:00"></div>
+    </div>
+    
+    <div class="restaurant">
+      <div class="restaurant-info">
+        <div class="restaurant-name">What The Buckwheat?</div>
+        <div class="restaurant-hours">Open Today: 11am - 9pm</div>
+      </div>
+      <div class="restaurant-countdown" data-time="21:00:00"></div>
+    </div>
+
+    </div>
+
+    <!-- notes footer -->
+    <div data-role="footer" data-theme='b'>
+      <h3> FOOTER Social - Media </h3>
+    </div>
+
+  </div> <!-- end of page -------------------------------------------->
+<!--PAGE 2-->
+  <div data-role="page" id="show">
+
+    <!-- header -->
+    <div data-role="header" data-theme='e'>
+      <!-- /navbar -->
+      <div data-role="navbar" data-theme='e'>
+        <ul>
+          <li><a href="#home" data-transition="pop">Open Restaurants Database</a></li>
+          <li><a href="#add" data-transition="pop">Add a favorite Restaurant</a></li>
+          <li><a href="#menu" data-transition="slideup">View a Menu</a></li>
+        </ul>
+      </div>
+      <h2>Here are Your Saved Places</h2>
+      <br><br>
+
+    </div>
+
+    <!-- content -->
+
+    <div data-role="content" data-theme='c'>
+      <ul id="myul" data-role="listview"></ul>
+      <div id="new-restaurants"></div>
+      <div id="restaurant-saved" class="restaurant-saved">
+        <div class="restaurant-info-saved">
+          <div class="restaurant-name-saved"></div>
+          <div class="restaurant-hours-saved"></div>
+        </div>
+      </div>
+
+    </div>
+    <!-- notes footer -->
+    <div data-role="footer" data-theme='b'>
+      <h3>OllieMaxInc</h3>
+    </div>
+
+  </div> <!-- end of page ----------------------------------->
+<!--PAGE 3-->
+  <div data-role="page" id="add">
+
+    <!-- header -->
+    <div data-role="header" data-theme='e'>
+      <div data-role="navbar" data-theme='e'>
+        <ul>
+          <li><a href="#home" data-transition="flip">Open Restaurants Database</a></li>
+          <li><a href="#show" data-transition="flip">Your Saved Restaurant</a></li>
+          <li><a href="#menu" data-transition="slideup">View a Menu</a></li>
+        </ul>
+      </div>
+      <h2>Add a Hot New Restaurant</h2>
+    </div>
+
+    <!-- content -->
+    <div data-role="content" data-theme='d'>
+
+      Enter the Restaurant Name <br/>
+      <input type="text" value="" id="restaurantName" /><br/>
+      Enter the closing time HH:MM format please<br>
+      <input type="text" value="" id="closingTimeInput" />
+
+      <button id="buttonAdd">Add Restaurant</button>
+      <br>
+ 
+
+      <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">What next?</a>
+      <div data-role="popup" id="popupMenu" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#home" data-transition="flow">Back to Home</a></li>
+          <li><a href="#show" data-transition="fade">Show Saved Restaurants</a></li>
+          <li><a href="#menu" data-transition="slideup">Leave a Rating</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- notes footer -->
+    <div data-role="footer" data-theme='b'>
+      <h3>OllieMaxInc</h3>
+    </div>
+
+  </div> <!-- end of page --------------------------------------->
+<!-- <------------------------------Page 4----------------------------> 
+  <div data-role="page" id="menu">
+    <div data-role="header" data-theme="a">
+      <h1>Viewable Menu</h1>
+      
+      <!-- navigation -->
+    <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-transition="slide">Home</a></li>
+          <li><a href="#show" data-transition="slide">Saved Restaurants</a></li>
+          <li><a href="#add" data-transition="pop">Add a favorite Restaurant</a></li>
+        </ul>
+      </div>
+    </div>
+    <div data-role="content" data-theme="a">
+      <h2>Or a place to review?</h2>
+      <p>menu/review/ratings system</p>
+      <div class="stars" id="star1">&#9733;</div>
+      <div class="stars" id="star2">&#9733;</div>
+      <div class="stars" id="star3">&#9733;</div>
+      <div class="stars" id="star4">&#9733;</div>
+      <div class="stars" id="star5">&#9733;</div>
+      <p id="result"></p>
+    </div>
+   
+   <!-- Footer -->
+    <div data-role="footer" data-theme="b">
+      <h4>OllieMaxInc</h4>
+    </div>
+  </div>
+</body>
+
+</html>

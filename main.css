@@ -1,0 +1,71 @@
+.restaurant {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+.restaurant-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.restaurant-hours {
+  margin-bottom: 10px;
+}
+
+.restaurant-countdown {
+  font-size: 24px;
+  font-weight: bold;
+}
+.restaurant-saved {
+  margin-bottom: 20px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .restaurant-info-saved {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-right: 20px;
+ }
+ .restaurant-name-saved {
+   font-size: 24px;
+   font-weight: bold;
+   margin-bottom: 10px;
+ }
+ .restaurant-hours-saved {
+   margin-bottom: 10px;
+ }
+ 
+ .restaurant-countdown-saved {
+   font-size: 24px;
+   font-weight: bold;
+ }
+
+
+ .stars {
+  display: inline-block;
+  font-size: 30px;
+  color: #ff0800;
+  text-shadow: 1px 1px #888;
+}
+.star:hover,
+.star:hover ~ .star {
+  color: #FFD700;
+}
+.selected {
+  color: #f1c40f;
+}
