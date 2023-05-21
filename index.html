@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <!-- what came with the template -->
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-  <link rel="stylesheet" href="css/themes/my-custom-theme.css" />
-  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-  <link rel="stylesheet" href="my-custom-theme.min.css"/>
+  <link rel="stylesheet" href="stylesheets.css/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="stylesheets.css/main.css" />
+  <link rel="stylesheet" href="stylesheets.css/my-custom-theme.css"/>
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   
@@ -71,6 +71,7 @@
       </div>
       <div class="restaurant-countdown" data-time="21:00:00"></div>
     </div>
+    
 
     </div>
 
@@ -153,6 +154,7 @@
           <li><a href="#review" data-transition="slideup">Leave a Rating</a></li>
         </ul>
       </div>
+     
 
     </div>
 
@@ -163,12 +165,12 @@
 
   </div> <!-- end of page --------------------------------------->
 <!-- <------------------------------Page 4----------------------------> 
-  <div data-role="page" id="review">
+  <!-- <div data-role="page" id="review">
     <div data-role="header" data-theme="a">
-      <h1>Reviews</h1>
+      <h1>Reviews</h1> -->
       
       <!-- navigation -->
-    <div data-role="navbar">
+    <!-- <div data-role="navbar">
         <ul>
           <li><a href="#home" data-transition="slide">Home</a></li>
           <li><a href="#show" data-transition="slide">Saved Restaurants</a></li>
@@ -176,9 +178,9 @@
         </ul>
       </div>
     </div>
-    
+     -->
     <!-- content -->
-    <div data-role="content" data-theme="a">
+    <!-- <div data-role="content" data-theme="a">
       <h2>Review Your Favorite Restaurants Here</h2>
       <p>ratings system</p>
       <p>On this page, your saved restaurants will be available for review. From there
@@ -190,13 +192,65 @@
       <div class="stars" id="star4">&#9733;</div>
       <div class="stars" id="star5">&#9733;</div>
       <p id="result"></p>
-    </div>
+
+      <ul id="reviews-container"></ul>
+
+      
+    </div> -->
    
    <!-- Footer -->
-    <div data-role="footer" data-theme="b">
+    <!-- <div data-role="footer" data-theme="b">
       <h4>OllieMaxInc</h4>
     </div>
+  </div> -->
+
+
+  <!-- Page 4 -->
+<div data-role="page" id="review">
+  <div data-role="header" data-theme="a">
+    <h1>Reviews</h1>
+    <!-- Navigation -->
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-transition="slide">Home</a></li>
+        <li><a href="#show" data-transition="slide">Saved Restaurants</a></li>
+        <li><a href="#add" data-transition="pop">Add a favorite Restaurant</a></li>
+      </ul>
+    </div>
   </div>
+
+  <!-- Content -->
+  <div data-role="content" data-theme="a">
+    <!-- <h2>Review Your Favorite Restaurants Here</h2>
+    <p>ratings system</p>
+    <p>On this page, your saved restaurants will be available for review. From there, we can pull an average score and a personal score of how the restaurant is rated.</p>
+    <div class="stars" id="star1">&#9733;</div>
+    <div class="stars" id="star2">&#9733;</div>
+    <div class="stars" id="star3">&#9733;</div>
+    <div class="stars" id="star4">&#9733;</div>
+    <div class="stars" id="star5">&#9733;</div>
+    <p id="result"></p> -->
+    <h1>Reviews</h1>
+    <form>
+      <label for="restaurant-name">Restaurant Name:</label>
+      <input type="text" id="restaurant-name">
+      <br>
+      <label for="rating">Rating:</label>
+      <input type="number" id="rating" min="1" max="5">
+      <br>
+      <button type="button" id="review-submit">Submit Review</button>
+    </form>
+    <h2>Latest Reviews:</h2>
+  
+
+    <div id="reviews-container"></div>
+  </div>
+
+  <!-- Footer -->
+  <div data-role="footer" data-theme="b">
+    <h4>OllieMaxInc</h4>
+  </div>
+</div>
 </body>
 
 </html>
