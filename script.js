@@ -6,9 +6,9 @@ let NoteObject = function (pData, pType, pPriority) {
     this.priority = pPriority;
 };
 var restaurants = [
-  { name: "Crunch Coop test array", closingTime: "20:00:00" },
-  { name: "Slammin Salmon test array", closingTime: "22:00:00" },
-  { name: "What The Buckwheat? test array", closingTime: "21:00:00" }
+  { name: "Crunch Coop ", closingTime: "20:00:00" },
+  { name: "Slammin Salmon ", closingTime: "22:00:00" },
+  { name: "What The Buckwheat? ", closingTime: "21:00:00" }
 ];
 
  // Define the reviews array
